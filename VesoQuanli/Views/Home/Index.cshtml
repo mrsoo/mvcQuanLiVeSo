@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+<link rel="stylesheet" href="../../Content/Site.css" />
+<div class="container">
+    <div class="row">
+        
+            @if (@ViewBag.username == null)
+            {
+            <div class="panel pull-right col-lg-3 col-sm-12 col-xs-12">
+                <div id="loginbox">
+                    <div class="title text-center">ĐĂNG NHẬP</div>
+                    <div class="content">
+                        <form role="form" action="./Index" method="post">
+                            <div class="form-group">
+                                <label for="username">Tài Khoản</label>
+                                <input type="email" class="form-control" name="username" placeholder="Tài khoản" />
+                            </div>
+                            <div class="form-group">
+                                <label for="passwd">Mật khẩu</label>
+                                <input type="password" class="form-control" name="passwd" placeholder="Nhập mật khẩu" />
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="submit" class="btn btn-default">Đăng nhập</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            }
+            @if(ViewBag.username != null)
+            {
+                 <div class="panel pull-right col-lg-3 col-sm-12 col-xs-12">
+                    <div id="loginbox">
+                        <div class="title text-center">TÀI KHOẢNG</div>
+                        <div class="content">
+                            <form role="form" action="./Index" method="post">
+                                <div class="form-group">
+                                    <label>Tài Khoản</label>
+                                    <input type="text" disabled value="@ViewBag.username" />
+                                </div>
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-default">Đăng xuất</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        <div class="panel pull-left col-lg-9">
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+            dfgh<br />
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="panel panel-footer">
+
+    </div> 
+</div>

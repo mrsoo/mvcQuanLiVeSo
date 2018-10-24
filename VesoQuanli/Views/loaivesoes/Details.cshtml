@@ -1,0 +1,26 @@
+﻿@model VesoQuanli.Models.loaiveso
+
+@{
+    ViewBag.Title = "Chi tiết";
+}
+
+<h2>Chi tiết @Html.DisplayFor(model => model.Id) </h2>
+
+<div>
+    <h4>Loại vé số</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

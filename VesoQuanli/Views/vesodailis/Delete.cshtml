@@ -1,0 +1,56 @@
+﻿@model VesoQuanli.Models.vesodaili
+
+@{
+    ViewBag.Title = "Xóa";
+}
+
+<h2>Xóa bản ghi @Html.DisplayFor(model=>model.idveso)_@Html.DisplayFor(model=>model.Iddaili)</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Chi tiết bản ghi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.slbandc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slbandc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iddaili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iddaili)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idveso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idveso)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

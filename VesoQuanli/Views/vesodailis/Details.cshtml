@@ -1,0 +1,50 @@
+﻿@model VesoQuanli.Models.vesodaili
+
+@{
+    ViewBag.Title = "Chi tiết";
+}
+
+<h2>Chi tiết bản ghi @Html.DisplayFor(model=>model.Iddaili)_@Html.DisplayFor(model=>model.Iddaili)</h2>
+
+<div>
+    <h4>Vé số _ Đại lý</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.slbandc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slbandc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iddaili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iddaili)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idveso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idveso)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

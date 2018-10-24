@@ -1,0 +1,32 @@
+﻿@model VesoQuanli.Models.loaiveso
+
+@{
+    ViewBag.Title = "Xóa";
+}
+
+<h2>Delete</h2>
+
+<h3>Chắc chắn xóa?</h3>
+<div>
+    <h4>loaiveso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

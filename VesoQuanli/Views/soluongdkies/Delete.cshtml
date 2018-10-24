@@ -1,0 +1,40 @@
+﻿@model VesoQuanli.Models.soluongdky
+
+@{
+    ViewBag.Title = "Xóa";
+}
+
+<h2>Xóa bản ghi @Html.DisplayFor(model=>model.Id)</h2>
+
+<h3>Chắc chắn xóa?</h3>
+<div>
+    <h4>Chi tiết đăng kí</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sldky)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sldky)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

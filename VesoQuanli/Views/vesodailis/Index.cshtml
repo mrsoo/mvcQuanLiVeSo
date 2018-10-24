@@ -1,0 +1,51 @@
+﻿@model IEnumerable<VesoQuanli.Models.vesodaili>
+
+@{
+    ViewBag.Title = "Quản lý Đặt vé";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới bản ghi", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.slbandc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Iddaili)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idveso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.slbandc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Iddaili)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idveso)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Chi tiết", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Xóa", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

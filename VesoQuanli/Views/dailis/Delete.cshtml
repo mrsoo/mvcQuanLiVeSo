@@ -1,0 +1,40 @@
+﻿@model VesoQuanli.Models.daili
+
+@{
+    ViewBag.Title = "Xóa";
+}
+
+<h2>Xóa @Html.DisplayFor(model=>model.Id)</h2>
+
+<h3>Chắc chắn xóa?</h3>
+<div>
+    <h4>Đại lí</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDaili)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDaili)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Về trang chủ", "Index")
+        </div>
+    }
+</div>
